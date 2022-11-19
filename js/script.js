@@ -143,3 +143,17 @@ buttonBurger.addEventListener('click', function(event){
       listBurger.classList.toggle('menu-wrapper-active')
    }
 })
+
+const button = document.querySelector('.button')
+
+button.addEventListener('touchstart', function(event){
+   if (event.target.closest('.button')) {
+      button.classList.add('button-active')
+   }
+})
+
+button.addEventListener('touched', function(event){
+   if (event.target.closest('.button')) {
+      button.classList.remove('button-active')
+   }
+})
