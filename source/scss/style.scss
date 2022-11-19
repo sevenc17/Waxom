@@ -330,6 +330,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	text-align: center;
 	.text {
 		color: #555;
+		padding: 0 0 5% 0;
 		h2 {
 			font-family: "Raleway", sans-serif;
 			font-weight: 700;
@@ -1256,6 +1257,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 @media (max-width: 665px) {
+	.button {
+		font-size: calc(4px + 4 * (100vw / 1400));
+	}
 	.services__list {
 		.service:hover {
 			&::before{
@@ -1272,7 +1276,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		}
 		.service {
 			p {
-				max-width: 70%;
+				max-width: 80%;
 			}
 		}
 	}
@@ -1289,6 +1293,30 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 				font-weight: 400;
 				color: #fff;
 				font-size: calc(9px + 14 * (100vw / 1400));
+			}
+		}
+	}
+	.banner {
+		text-align: center;
+		.text {
+			color: #555;
+			padding: 0 0 5% 0;
+			h2 {
+				font-family: "Raleway", sans-serif;
+				font-weight: 700;
+				font-size: calc(9px + 30 * (100vw / 1400));
+			}
+			p {
+				font-family: "Montserrat", sans-serif;
+				font-size: calc(9px + 7 * (100vw / 1400));
+				max-width: 95%;
+				margin: 0 auto;
+				padding: 2% 0;
+			}
+		}
+		.banner-image {
+			img {
+				max-width: 100%;
 			}
 		}
 	}

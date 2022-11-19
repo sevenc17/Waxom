@@ -409,6 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .banner .text {
   color: #555;
+  padding: 0 0 5% 0;
 }
 .banner .text h2 {
   font-family: "Raleway", sans-serif;
@@ -1470,6 +1471,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 665px) {
+  .button {
+    font-size: calc(4px + 0.2857142857vw);
+  }
   .services__list .service:hover::before {
     content: "";
     position: absolute;
@@ -1482,7 +1486,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.5s;
   }
   .services__list .service p {
-    max-width: 70%;
+    max-width: 80%;
   }
   .textboxes .info p {
     font-family: "Montserrat", sans-serif;
@@ -1495,6 +1499,28 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: #fff;
     font-size: calc(9px + 1vw);
+  }
+  .banner {
+    text-align: center;
+  }
+  .banner .text {
+    color: #555;
+    padding: 0 0 5% 0;
+  }
+  .banner .text h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: calc(9px + 2.1428571429vw);
+  }
+  .banner .text p {
+    font-family: "Montserrat", sans-serif;
+    font-size: calc(9px + 0.5vw);
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 2% 0;
+  }
+  .banner .banner-image img {
+    max-width: 100%;
   }
 }
 @media (max-width: 340px) {
