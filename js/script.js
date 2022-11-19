@@ -152,7 +152,8 @@ button.addEventListener('touchstart', function(event){
    }
 })
 
-button.addEventListener('touched', function(event){
+button.addEventListener('touchend', function(event){
+   console.log(1)
    if (event.target.closest('.button')) {
       button.classList.remove('button-active')
    }
