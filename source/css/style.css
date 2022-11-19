@@ -103,43 +103,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
-.button {
-  cursor: pointer;
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  color: #fff;
-  font-size: calc(10px + 0.2857142857vw);
-  background-color: #998675;
-  max-width: 17%;
-  text-transform: uppercase;
-  padding: 1.5% 0;
-  margin: 4% auto 4% auto;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 3px 1px #736357;
-          box-shadow: 0px 3px 1px #736357;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-@media (min-width: 1024px) {
-  .button:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    -webkit-transform: translate(0, 3px);
-            transform: translate(0, 3px);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-}
-.button.button-active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(0, 3px);
-          transform: translate(0, 3px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .slider {
   position: relative;
 }
@@ -490,14 +453,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5% 0;
   text-align: center;
 }
-.textboxes-button:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(0, 3px);
-          transform: translate(0, 3px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
 .textboxes-button a {
   color: #fff;
   text-transform: uppercase;
@@ -510,56 +465,17 @@ h1, h2, h3, h4, h5, h6 {
 .projects {
   padding-top: 5%;
 }
-.projects .projects-text {
-  text-align: center;
-}
-.projects .projects-text h2 {
-  font-family: "Raleway";
-  font-size: calc(9px + 1.5vw);
-  color: #555;
-  font-weight: bold;
-  color: #555;
-}
-.projects .projects-text p {
-  font-family: "Montserrat", sans-serif;
-  font-size: calc(9px + 0.5vw);
-  padding: 2% 0 4% 0;
-  max-width: 80%;
-  margin: 0 auto;
-}
-.projects .projects-text .projects-tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  max-width: 60%;
-  margin: 0 auto;
-  padding-bottom: 4%;
-}
-.projects .projects-text .projects-tabs .tab {
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  color: #8c8c8c;
-  font-size: calc(9px + 0.3571428571vw);
-  padding: 1% 3%;
-}
-.projects .projects-text .projects-tabs .tab.active-tab {
-  background-color: #998675;
-  color: #fff;
-  padding: 1% 3%;
-  border-radius: 3px;
-}
-.projects .list__projects .help-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+.list__projects {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 370px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 2%;
+  gap: 0% 5%;
 }
-.projects .list__projects .project {
+.list__projects .project {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -569,16 +485,17 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   -webkit-transition-duration: 0.7s;
           transition-duration: 0.7s;
+  margin: 0 0 5% 0;
 }
-.projects .list__projects .project .projects__photo {
+.list__projects .project .projects__photo {
   position: relative;
 }
-.projects .list__projects .project .projects__photo img {
-  max-width: 100%;
+.list__projects .project .projects__photo img {
+  width: 100%;
 }
-.projects .list__projects .project .projects__photo::before {
+.list__projects .project .projects__photo::before {
   content: "";
-  border: 15px solid transparent;
+  border: 3vw solid transparent;
   border-bottom: 12px solid #fff;
   -webkit-transition: 0.7s;
   transition: 0.7s;
@@ -586,65 +503,108 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -0.5%;
   left: 4%;
 }
-.projects .list__projects .project .projects__photo .project-button {
+.list__projects .project .projects__photo .project-button {
   position: absolute;
   display: none;
   width: 100%;
   top: 48%;
   left: 42%;
 }
-.projects .list__projects .project .projects__photo .project-button img {
+.list__projects .project .projects__photo .project-button img {
   max-width: 80%;
 }
-.projects .list__projects .project .projects__photo .project-link {
+.list__projects .project .projects__photo .project-link {
   padding-right: 4%;
 }
-.projects .list__projects .project .projects__photo .project-zoom {
+.list__projects .project .projects__photo .project-zoom {
   cursor: pointer;
 }
-.projects .list__projects .project .projects__info {
+.list__projects .project .projects__info {
   padding: 7.5% 0 7.5% 7%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.projects .list__projects .project .projects__info p {
+.list__projects .project .projects__info p {
   font-family: "Montserrat", sans-serif;
   font-size: calc(5px + 0.5vw);
   color: #d1d1d1;
 }
-.projects .list__projects .project .projects__info h2 {
+.list__projects .project .projects__info h2 {
   font-family: "Raleway";
   font-size: calc(9px + 0.7142857143vw);
   font-weight: medium;
   color: #c7b299;
   padding: 0 0 2% 0;
 }
-.projects .list__projects .project:hover {
+.list__projects .project:hover {
   background-color: #362f2d;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-.projects .list__projects .project:hover p {
+.list__projects .project:hover p {
   color: #c7b299;
 }
-.projects .list__projects .project:hover h2 {
+.list__projects .project:hover h2 {
   color: #fff;
 }
-.projects .list__projects .project:hover .projects__photo::before {
+.list__projects .project:hover .projects__photo::before {
   border-bottom-color: #362f2d;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-.projects .list__projects .project:hover .projects__photo .project-button {
+.list__projects .project:hover .projects__photo .project-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.projects .project__button {
+
+.projects-text {
   text-align: center;
 }
-.projects .list-projets__popup {
+.projects-text h2 {
+  font-family: "Raleway";
+  font-size: calc(9px + 1.5vw);
+  color: #555;
+  font-weight: bold;
+  color: #555;
+}
+.projects-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(9px + 0.5vw);
+  padding: 2% 0 4% 0;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.projects-text .projects-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 60%;
+  margin: 0 auto;
+  padding-bottom: 4%;
+}
+.projects-text .projects-tabs .tab {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  color: #8c8c8c;
+  font-size: calc(9px + 0.3571428571vw);
+  padding: 1% 3%;
+}
+.projects-text .projects-tabs .tab.active-tab {
+  background-color: #998675;
+  color: #fff;
+  padding: 1% 3%;
+  border-radius: 3px;
+}
+
+.project__button {
+  text-align: center;
+}
+
+.list-projets__popup {
   display: none;
   position: fixed;
   width: 100%;
@@ -654,17 +614,19 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   z-index: 10;
 }
-.projects .popup-active {
+
+.popup-active {
   display: block;
 }
-.projects .list-projets__popup-content {
+
+.list-projets__popup-content {
   text-align: center;
 }
-.projects .list-projets__popup-content img {
+.list-projets__popup-content img {
   padding-top: 40vh;
   max-width: 100%;
 }
-.projects .list-projets__popup-content .close {
+.list-projets__popup-content .close {
   height: 5vw;
   width: 5vw;
   margin: 5% auto 0 auto;
@@ -672,7 +634,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   z-index: 5;
 }
-.projects .list-projets__popup-content .close::before {
+.list-projets__popup-content .close::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -681,7 +643,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.projects .list-projets__popup-content .close::after {
+.list-projets__popup-content .close::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -690,7 +652,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.projects .list-projets__popup-content .close::after, .projects .list-projets__popup-content .close::before {
+.list-projets__popup-content .close::after, .list-projets__popup-content .close::before {
   top: 50%;
   left: 0;
   z-index: 0;
@@ -1345,6 +1307,51 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
+.button {
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  color: #fff;
+  font-size: calc(10px + 0.2857142857vw);
+  background-color: #998675;
+  max-width: 17%;
+  text-transform: uppercase;
+  padding: 1.5% 0;
+  margin: 4% auto 4% auto;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 3px 1px #736357;
+          box-shadow: 0px 3px 1px #736357;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 1024px) {
+  .button:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: translate(0, 3px);
+            transform: translate(0, 3px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .textboxes-button:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: translate(0, 3px);
+            transform: translate(0, 3px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+.button.button-active, .textboxes-button.button-active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(0, 3px);
+          transform: translate(0, 3px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 @media (max-width: 1200px) {
   .header__wrapper .list__menu {
     font-size: calc(9px + 0.2857142857vw);
@@ -1356,6 +1363,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 768px) {
+  .list__projects {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
+  }
   .header__wrapper .logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 40%;
@@ -1534,6 +1544,28 @@ h1, h2, h3, h4, h5, h6 {
   }
   .banner .banner-image img {
     max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .textboxes .info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+  }
+  .textboxes .info p {
+    font-size: calc(9px + 0.5vw);
+  }
+  .textboxes .info h3 {
+    font-size: calc(9px + 0.7142857143vw);
+  }
+  .textboxes-button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
+    width: 50%;
+  }
+  .textboxes-button a {
+    font-size: calc(4px + 0.3571428571vw);
   }
 }
 @media (max-width: 340px) {
