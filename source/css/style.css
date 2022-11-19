@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: #fff;
   font-size: calc(9px + 3.0714285714vw);
-  padding: 1% 0;
+  padding: 2% 0;
 }
 .slider .slider-item p {
   color: #fff;
@@ -1021,6 +1021,36 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.7s;
 }
 
+.date {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #fff;
+  min-width: 3.2vw;
+}
+.date .month h3 {
+  padding: 10%;
+  background-color: #252525;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: calc(6px + 0.4285714286vw);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.date .day h2 {
+  padding: 10%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #363636;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: calc(14px + 0.7142857143vw);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
 .post-text {
   text-align: left;
   max-width: 85%;
@@ -1058,36 +1088,6 @@ h1, h2, h3, h4, h5, h6 {
   right: -25%;
   border: 5px solid transparent;
   border-left: 5px solid #c7b299;
-}
-
-.date {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  color: #fff;
-  min-width: 15.5%;
-}
-.date .month h3 {
-  padding: 10%;
-  background-color: #252525;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: calc(6px + 0.4285714286vw);
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-.date .day h2 {
-  padding: 10%;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  background-color: #363636;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: calc(14px + 0.7142857143vw);
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
 }
 
 .banner-partners {
@@ -1461,7 +1461,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.8;
   }
   .button {
-    font-size: calc(6px + 0.2857142857vw);
+    font-size: calc(8px + 0.2857142857vw);
   }
   .slider .slider-item p {
     max-width: 70%;
@@ -1483,7 +1483,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 665px) {
   .button {
-    font-size: calc(4px + 0.2857142857vw);
+    font-size: calc(6px + 0.2857142857vw);
+    padding: 2% 0;
+    max-width: 20%;
   }
   .services__list .service:hover::before {
     content: "";
