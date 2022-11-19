@@ -383,7 +383,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .list__projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 370px));
+	@media (min-width: 1920px) {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 370px));
+	}
+	grid-template-columns: repeat(auto-fit, minmax(250px, 310px));
 	justify-content: center;
 	gap: 0% 5%;
 	.project {
@@ -400,7 +403,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			}
 			&::before {
 				content: '';
-				border: 3vw solid transparent;
+				border: 15px solid transparent;
 				border-bottom: 12px solid #fff;
 				transition: 0.7s;
 				position: absolute;

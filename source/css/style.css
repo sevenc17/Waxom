@@ -469,11 +469,16 @@ h1, h2, h3, h4, h5, h6 {
 .list__projects {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 370px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 310px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: 0% 5%;
+}
+@media (min-width: 1920px) {
+  .list__projects {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 370px));
+  }
 }
 .list__projects .project {
   display: none;
@@ -495,7 +500,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .list__projects .project .projects__photo::before {
   content: "";
-  border: 3vw solid transparent;
+  border: 15px solid transparent;
   border-bottom: 12px solid #fff;
   -webkit-transition: 0.7s;
   transition: 0.7s;
