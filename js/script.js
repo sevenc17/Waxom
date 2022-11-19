@@ -144,17 +144,17 @@ buttonBurger.addEventListener('click', function(event){
    }
 })
 
-const button = document.querySelector('.button')
+const buttonList = document.querySelectorAll('.button')
 
-button.addEventListener('touchstart', function(event){
-   if (event.target.closest('.button')) {
-      button.classList.add('button-active')
-   }
-})
-
-button.addEventListener('touchend', function(event){
-   console.log(1)
-   if (event.target.closest('.button')) {
-      button.classList.remove('button-active')
-   }
-})
+for (i of buttonList){
+   i.addEventListener('touchstart', function(event){
+      if (event.target.closest('.button')) {
+         event.target.classList.add('button-active')
+      }
+   })
+   i.addEventListener('touchend', function(event){
+      if (event.target.closest('.button')) {
+        event.target.classList.remove('button-active')
+      }
+   })
+}
