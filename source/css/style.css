@@ -120,7 +120,18 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.button:hover {
+
+@media (min-width: 1024px) {
+  .button:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: translate(0, 3px);
+            transform: translate(0, 3px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+.button.button-active {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: translate(0, 3px);
