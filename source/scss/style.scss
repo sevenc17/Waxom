@@ -1159,9 +1159,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			transition: 0.5s;
 		}
 	}
+	.project__button {
+		&:hover {
+			box-shadow: none;
+			transform: translate(0, 3px);
+			transition: 0.5s;
+		}		
+	}
 }
 
-.button.button-active, .textboxes-button.button-active {
+.button.button-active, .textboxes-button.button-active, .project__button.button-active {
 	box-shadow: none;
 	transform: translate(0, 3px);
 	transition: 0.5s;	
