@@ -1209,8 +1209,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		}
 	}
 	.exelent-text {
-		padding: 0 0 5% 0;
+		padding: 0 0 5%; 
 		li {
+			font-size: calc(7px + 11 * (100vw / 1400));
 			background: url(arrow-icon.jpg) 0 50% / 2.5vw 2.5vw no-repeat;
 		}
 	}
