@@ -505,6 +505,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .project__button {
 	text-align: center;
+	margin: 0 auto;
+	padding: 3% 0;
 }
 
 .list-projets__popup {
@@ -1059,7 +1061,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .footer__info {
 	padding: 0 16%;
 	background-color: #111;
-	height: 100px;
+	height: 120px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1070,14 +1072,41 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		color: #555;
 		font-family: "Montserrat", sans-serif;
 		font-weight: 400;
+		font-size: calc(7px + 6 * (100vw / 1400));
 		p {
 			padding: 0 2%;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 2vh;
+				width: 1px;
+				background-color: #252525;
+			}
+		}
+		p:last-child {
+			&::after {
+				display: none;
+			}
 		}
 		span {
 			color: #959595;
 		}
 		h3 {
 			color: #c7b299;
+			position: relative;
+			padding: 0 2%;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 2vh;
+				width: 1px;
+				background-color: #252525;
+			}
 		}
 	}
 	.info1 {
@@ -1142,12 +1171,25 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			font-size: calc(9px + 4 * (100vw / 1400));
 		}
 	}
+	.projects-text {
+		.projects-tabs {
+			max-width: 70%;
+			.tab {
+				font-size: calc(7px + 5 * (100vw / 1400));
+			}
+		}
+	}
 }
 
 @media (max-width: 980px) {
 	.header__wrapper {
 		.list__menu {
 			font-size: calc(6px + 4 * (100vw / 1400));
+		}
+	}
+	.projects-text {
+		.projects-tabs {
+			max-width: 80%;
 		}
 	}
 }
@@ -1273,6 +1315,21 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			font-size: calc(6px + 3 * (100vw / 1400));
 		}
 	}
+	.video-banner-text {
+		img {
+			max-width: 10%;
+		}
+		h2 {
+			font-size: calc(15px + 20 * (100vw / 1400));
+		}
+		p {
+			font-size: calc(12px + 11 * (100vw / 1400));
+			max-width: 55%;
+		}
+		span {
+			font-size: calc(7px + 9 * (100vw / 1400));
+		}
+	}
 }
 
 @media (max-width: 665px) {
@@ -1280,6 +1337,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		font-size: calc(6px + 4 * (100vw / 1400));
 		padding: 2% 0;
 		max-width: 20%;
+	}
+	.project__button {
+		text-align: center;
+		margin: 4% auto 8% auto;
 	}
 	.services__list {
 		.service:hover {
@@ -1344,25 +1405,37 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 @media (max-width: 500px) {
-.textboxes {
-	.info {
-		flex: 0 1 75%;
+	.textboxes {
+		.info {
+			flex: 0 1 75%;
+			p {
+				font-size: calc(9px + 7 * (100vw / 1400));
+			}
+			h3 {
+				font-size: calc(9px + 10 * (100vw / 1400));
+			}
+		}
+	}
+	.textboxes-button{
+		flex: 1 1 25%;
+		width: 50%;
+		a {
+			font-size: calc(4px + 5 * (100vw / 1400));
+		}
+	}
+	.projects-text {
 		p {
-			font-size: calc(9px + 7 * (100vw / 1400));
-		}
-		h3 {
-			font-size: calc(9px + 10 * (100vw / 1400));
+			max-width: 100%;
 		}
 	}
-}
-
-.textboxes-button{
-	flex: 1 1 25%;
-	width: 50%;
-	a {
-		font-size: calc(4px + 5 * (100vw / 1400));
+	.projects-text {
+		.projects-tabs {
+			max-width: 90%;
+			.tab {
+				font-size: calc(5px + 5 * (100vw / 1400));
+			}
+		}
 	}
-}	
 }
 
 @media (max-width: 340px) {
