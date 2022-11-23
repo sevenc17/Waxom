@@ -484,13 +484,18 @@ body.scroll-off {
 			&::before {
 				display: none;
 			}
-		}
-		img {
-			max-width: 40vw;
-		}
-		@media (min-height: 550px) {
 			img {
-				max-width: 50vw;
+				max-width: 40vw;
+			}
+			@media (max-width: 550px) {
+				img {
+					max-width: 70vw;
+				}
+			}
+			@media (max-height: 550px) {
+				img {
+					max-width: 55vw;
+				}
 			}
 		}
 		&:hover {

@@ -586,12 +586,17 @@ body.scroll-off {
 .list__projects .project.project-active-popup .projects__photo::before {
   display: none;
 }
-.list__projects .project.project-active-popup img {
+.list__projects .project.project-active-popup .projects__photo img {
   max-width: 40vw;
 }
-@media (min-height: 550px) {
-  .list__projects .project.project-active-popup img {
-    max-width: 50vw;
+@media (max-width: 550px) {
+  .list__projects .project.project-active-popup .projects__photo img {
+    max-width: 70vw;
+  }
+}
+@media (max-height: 550px) {
+  .list__projects .project.project-active-popup .projects__photo img {
+    max-width: 55vw;
   }
 }
 .list__projects .project.project-active-popup:hover .projects__photo::before {
