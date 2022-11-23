@@ -659,8 +659,8 @@ body.scroll-off {
 
 .close-popup.active-close {
   display: block;
-  height: 5vw;
-  width: 5vw;
+  height: 6vw;
+  width: 6vw;
   cursor: pointer;
   position: fixed;
   top: 5vh;
@@ -670,8 +670,8 @@ body.scroll-off {
 .close-popup.active-close::before {
   content: "";
   position: absolute;
-  height: 2px;
-  width: 5vw;
+  height: 3px;
+  width: 6vw;
   background-color: #fff;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -679,8 +679,8 @@ body.scroll-off {
 .close-popup.active-close::after {
   content: "";
   position: absolute;
-  height: 2px;
-  width: 5vw;
+  height: 3px;
+  width: 6vw;
   background-color: #fff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -1664,6 +1664,16 @@ body.scroll-off {
   .banner .banner-image img {
     max-width: 100%;
   }
+  .counter .counter-icon img {
+    width: 70%;
+    height: 5vw;
+  }
+  .counter h3 {
+    font-size: calc(5px + 0.5714285714vw);
+  }
+  .counter h2 {
+    font-size: calc(13px + 1.4285714286vw);
+  }
 }
 @media (max-width: 500px) {
   .textboxes .info {
@@ -1694,6 +1704,42 @@ body.scroll-off {
   }
   .projects-text .projects-tabs .tab {
     font-size: calc(5px + 0.3571428571vw);
+  }
+  .counters {
+    padding: 5% 18%;
+  }
+  .counter h3 {
+    font-size: calc(3px + 0.7142857143vw);
+  }
+  .counter h2 {
+    font-weight: 200;
+    color: #fff;
+    font-size: calc(10px + 1.0714285714vw);
+    line-height: 1.8;
+  }
+  .counter::after {
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 20px;
+    bottom: 0;
+    left: calc(50% - 10px);
+    position: absolute;
+  }
+  .counter-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 70%;
+            flex: 1 1 70%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media (max-width: 340px) {

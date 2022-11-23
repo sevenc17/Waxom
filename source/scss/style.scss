@@ -561,8 +561,8 @@ body.scroll-off {
 
 .close-popup.active-close {
 	display: block;
-	height: 5vw;
-	width: 5vw;
+	height: 6vw;
+	width: 6vw;
 	cursor: pointer;
 	position: fixed;
 	top: 5vh;
@@ -571,16 +571,16 @@ body.scroll-off {
 	&::before {
 		content: '';
 		position: absolute;
-		height: 2px;
-		width: 5vw;
+		height: 3px;
+		width: 6vw;
 		background-color: #fff;
 		transform: rotate(-45deg);
 	}
 	&::after {
 		content: '';
 		position: absolute;
-		height: 2px;
-		width: 5vw;
+		height: 3px;
+		width: 6vw;
 		background-color: #fff;
 		transform: rotate(45deg);
 	}
@@ -1462,6 +1462,20 @@ body.scroll-off {
 			}
 		}
 	}
+	.counter {
+		.counter-icon {
+			img {
+				width: 70%;
+				height: 5vw;
+			}
+		}
+		h3 {
+			font-size: calc(5px + 8 * (100vw / 1400));
+		}
+		h2 {
+			font-size: calc(13px + 20 * (100vw / 1400));
+		}
+	}
 }
 
 @media (max-width: 500px) {
@@ -1495,6 +1509,36 @@ body.scroll-off {
 				font-size: calc(5px + 5 * (100vw / 1400));
 			}
 		}
+	}
+	.counters {
+		padding: 5% 18%;
+	}
+	.counter {
+		h3 {
+			font-size: calc(3px + 10 * (100vw / 1400));
+		}
+		h2 {
+			font-weight: 200;
+			color: #fff;
+			font-size: calc(10px + 15 * (100vw / 1400));
+			line-height: 1.8;
+		}
+		&::after {
+			content: '';
+			background-color: #fff;
+			height: 2px;
+			width: 20px;
+			bottom: 0;
+			left: calc(50% - 10px);
+			position: absolute;
+		}
+	}
+
+	.counter-text {
+		display: flex;
+		flex: 1 1 70%;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 }
 
