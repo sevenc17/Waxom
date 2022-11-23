@@ -30,11 +30,8 @@ const web = [] = document.querySelectorAll(".webdesign");
 const zooms = [] = document.querySelectorAll(".project-zoom");
 
 
-const popup = document.querySelector('.list-projets__popup')
-
-const popupContent = document.querySelector('.list-projets__popup-content')
-
-const popupClose = document.querySelector('.close')
+const popupClose = document.querySelector('.close-popup')
+const bodyScroll = document.querySelector('body')
 
 console.log(typeof tabs);
 
@@ -87,36 +84,35 @@ for (var i = 0 ; i < tabs.length; i++) {
    }); 
 }
 
-popupClose.addEventListener('click', function(event){
-   console.log(event.target)
-	if (event.target.classList.closest('.close')) {
-		console.log(1)
-	}
-});
 
 for (var i = 0 ; i < zooms.length; i++) {
 	zooms[i].addEventListener('click', function(event){
-		if (event.target.classList.contains('project-zoom')) {
-			d = event.target.getAttribute('value');
-			popupContent.innerHTML = `
-			<img src="images/img/project-${d}.jpg" alt="">
-			<div class="close"></div>
-			`;
-			popup.classList.add('popup-active')
+		if (event.target.closest('.project')) {
+			event.target.closest('.project').classList.add('project-active-popup')
+         bodyScroll.classList.add('scroll-off')
+         popupClose.classList.add('active-close')
 		}
 	});
 }
 
-document.addEventListener('keyup', function(e){
-	console.log(e.code)
-	if (popup.classList.contains('popup-active') & e.code == 'Escape') {
-		popup.classList.remove('popup-active');
-	}
+popupClose.addEventListener('click', function(event){
+   bodyScroll.classList.remove('scroll-off')
+   popupClose.classList.remove('active-close')
+   for (var l = 0 ; l < projects.length; l++) {
+      if (projects[l].classList.contains('project-active-popup')){
+         projects[l].classList.remove('project-active-popup')
+      }
+   }
 })
 
-// if (popup.classList.contains('.popup-active')) {
-// 	popup.classList.remove('popup-active');
-// }
+document.addEventListener('keyup', function(e){
+	for (var l = 0 ; l < projects.length; l++) {
+      if (projects[l].classList.contains('project-active-popup')){
+         projects[l].classList.remove('project-active-popup')
+      }
+   }
+})
+
 
 const playVideo = document.querySelector('.play-video')
 const bannerVideo = document.querySelector('.video-banner__video')

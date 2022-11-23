@@ -41,6 +41,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Raleway:wght@400;500;600;700;800&family=Roboto&display=swap');
 
 
+body.scroll-off {
+	overflow-y: hidden;
+}
+
 /* Слайдер */
 .slick-slider{}
 /* Слайдер запущен */
@@ -463,6 +467,43 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			}
 		}
 	}
+	.project.project-active-popup {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		top: 0;
+		left: 0;
+		z-index: 10;
+		text-align: center;
+		.projects__info {
+				display: none;
+		}
+		.projects__photo {
+			top: 20vh;
+			&::before {
+				display: none;
+			}
+		}
+		img {
+			max-width: 40vw;
+		}
+		@media (min-height: 550px) {
+			img {
+				max-width: 50vw;
+			}
+		}
+		&:hover {
+			.projects__photo {
+				&::before {
+					display: none
+				}
+				.project-button {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .projects-text {
@@ -509,57 +550,41 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	padding: 3% 0;
 }
 
-.list-projets__popup {
+.close-popup {
 	display: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
-	top: 0;
-	left: 0;
-	z-index: 10;
 }
 
-.popup-active {
+.close-popup.active-close {
 	display: block;
+	height: 5vw;
+	width: 5vw;
+	cursor: pointer;
+	position: fixed;
+	top: 5vh;
+	right: 20vw;
+	z-index: 10;
+	&::before {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 5vw;
+		background-color: #fff;
+		transform: rotate(-45deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 5vw;
+		background-color: #fff;
+		transform: rotate(45deg);
+	}
+	&::after, &::before {
+		top: 50%;
+		left: 0;
+	}
 }
 
-.list-projets__popup-content {
-	text-align: center;
-	img {
-		padding-top: 40vh;
-		max-width: 100%;
-	}
-	.close {
-		height: 5vw;
-		width: 5vw;
-		margin: 5% auto 0 auto;
-		position: relative;
-		cursor: pointer;
-		z-index: 5;
-		&::before {
-			content: '';
-			position: absolute;
-			height: 2px;
-			width: 5vw;
-			background-color: #fff;
-			transform: rotate(-45deg);
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			height: 2px;
-			width: 5vw;
-			background-color: #fff;
-			transform: rotate(45deg);
-		}
-		&::after, &::before {
-			top: 50%;
-			left: 0;
-			z-index: 0;
-		}
-	}
-}
 
 .active-projects {
 	display: block !important;
