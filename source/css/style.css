@@ -1632,6 +1632,9 @@ body.scroll-off {
   .post__slider .slick-arrow.slick-prev {
     left: 37%;
   }
+  .post__title p {
+    max-width: 100%;
+  }
 }
 @media (max-width: 665px) {
   .button {
