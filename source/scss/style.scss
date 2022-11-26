@@ -1525,6 +1525,14 @@ body.scroll-off {
 	}
 }
 
+@media (max-width: 615px) {
+	.partner {
+		img {
+			max-width: 40%;
+		}
+	}
+}
+
 @media (max-width: 540px) {
 	.post {
 		.post-img  {

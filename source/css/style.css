@@ -1714,6 +1714,11 @@ body.scroll-off {
     font-size: calc(13px + 1.4285714286vw);
   }
 }
+@media (max-width: 615px) {
+  .partner img {
+    max-width: 40%;
+  }
+}
 @media (max-width: 540px) {
   .post .post-img::before {
     border: 10px solid transparent;
