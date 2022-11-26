@@ -1464,6 +1464,11 @@ body.scroll-off {
     background: url(arrow-icon.jpg) 0 50%/2.5vw 2.5vw no-repeat;
   }
 }
+@media (max-width: 940px) {
+  .date {
+    min-width: 4vw;
+  }
+}
 @media (max-width: 768px) {
   .list__projects {
     grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
@@ -1605,6 +1610,28 @@ body.scroll-off {
   .video-banner-text span {
     font-size: calc(7px + 0.6428571429vw);
   }
+  .date {
+    min-width: 5vw;
+  }
+  .post-button a {
+    font-size: calc(7px + 0.6428571429vw);
+  }
+  .post__slider {
+    padding: 0 0 5% 0;
+  }
+  .post__slider .slick-slide {
+    margin: 0 7px;
+  }
+  .post__slider .slick-arrow {
+    width: 5vw;
+    height: 5vw;
+  }
+  .post__slider .slick-arrow.slick-next {
+    right: 37%;
+  }
+  .post__slider .slick-arrow.slick-prev {
+    left: 37%;
+  }
 }
 @media (max-width: 665px) {
   .button {
@@ -1673,6 +1700,25 @@ body.scroll-off {
   }
   .counter h2 {
     font-size: calc(13px + 1.4285714286vw);
+  }
+}
+@media (max-width: 540px) {
+  .post .post-img::before {
+    border: 10px solid transparent;
+    border-bottom: 8px solid #fff;
+  }
+  .date {
+    min-width: 6.5vw;
+  }
+  .date .day h2 {
+    font-size: calc(13px + 0.4285714286vw);
+  }
+  .post-text h2 {
+    font-size: calc(9px + 0.4285714286vw);
+  }
+  .post-button a::after {
+    border: 3px solid transparent;
+    border-left: 3px solid #c7b299;
   }
 }
 @media (max-width: 500px) {

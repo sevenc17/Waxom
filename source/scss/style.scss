@@ -909,8 +909,8 @@ body.scroll-off {
 		font-family: "Montserrat", sans-serif;
 		font-weight: 500;
 	}
-
-	& a::after {
+	
+	a::after {
 		content: '';
 		position: absolute;
 		top: 30%;
@@ -1254,6 +1254,12 @@ body.scroll-off {
 	}
 }
 
+@media (max-width: 940px) {
+	.date {
+		min-width: 4vw
+	}
+}
+
 @media (max-width: 768px) {
 	.list__projects {
 		grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
@@ -1390,7 +1396,32 @@ body.scroll-off {
 			font-size: calc(7px + 9 * (100vw / 1400));
 		}
 	}
+	.date {
+		min-width: 5vw
+	}
+	.post-button {
+		a {
+			font-size: calc(7px + 9 * (100vw / 1400))
+		}
+	}
+	.post__slider {
+		padding: 0 0 5% 0;
+		.slick-slide {
+			margin: 0 7px;
+		}
+		.slick-arrow {
+			width: 5vw;
+			height: 5vw;
+		}
+		.slick-arrow.slick-next {
+			right: 37%;
+		}
+		.slick-arrow.slick-prev {
+			left: 37%;
+		}
+	}
 }
+
 
 @media (max-width: 665px) {
 	.button {
@@ -1475,6 +1506,37 @@ body.scroll-off {
 		h2 {
 			font-size: calc(13px + 20 * (100vw / 1400));
 		}
+	}
+}
+
+@media (max-width: 540px) {
+	.post {
+		.post-img  {
+			&::before {
+				border: 10px solid transparent;
+	    		border-bottom: 8px solid #fff;
+			}
+		}
+	}
+	.date {
+		min-width: 6.5vw;
+		.day {
+			h2 {
+				font-size: calc(13px + 6 * (100vw / 1400));
+			}
+		}
+	}
+	.post-text {
+		h2 {
+			font-size: calc(9px + 6 * (100vw / 1400))
+		}
+	}
+	.post-button {
+		a::after {
+			border: 3px solid transparent;
+			border-left: 3px solid #c7b299;
+		}
+
 	}
 }
 
