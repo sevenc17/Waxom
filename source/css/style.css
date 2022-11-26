@@ -1144,24 +1144,14 @@ body.scroll-off {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-.about .about-img h3 {
-  font-family: "Raleway";
-  font-size: calc(15px + 1.3571428571vw);
-  font-weight: 400;
-  background: url(logos.png) 0 0/20% 100% no-repeat;
-  padding: 0 0 2% 20%;
-  line-height: -2;
-  -webkit-transform: translate(0, -25%);
-          transform: translate(0, -25%);
+.about .about-img img {
+  max-width: 50%;
+  padding: 0 0 5% 0;
 }
 .about p {
   line-height: 1.7;
   padding: 5% 0;
   max-width: 95%;
-}
-.about img {
-  max-width: 80%;
-  padding: 0 0 5% 0;
 }
 
 .footer-h3 {
@@ -1498,8 +1488,8 @@ body.scroll-off {
   }
   .header__wrapper .list-burger {
     display: block;
-    width: 5vw;
-    height: 3.5vw;
+    width: 6vw;
+    height: 5vw;
     position: relative;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -1512,7 +1502,7 @@ body.scroll-off {
     left: 0;
     width: 100%;
     height: 2px;
-    top: 40%;
+    top: 45%;
     margin-top: 0px;
     -webkit-transition: 0.7s;
     transition: 0.7s;
@@ -1549,6 +1539,7 @@ body.scroll-off {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 5% 0;
   }
   .header__wrapper .menu-wrapper {
     top: -150vh;
@@ -1575,16 +1566,16 @@ body.scroll-off {
             justify-content: space-evenly;
     padding: 0 0 0 2%;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 40%;
-            flex: 1 1 40%;
+        -ms-flex: 1 1 20%;
+            flex: 1 1 20%;
   }
   .header__wrapper .nav__icon img {
-    max-width: 5.5vw;
+    max-width: 5vw;
   }
   .header__wrapper .list__menu {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 60%;
-            flex: 1 1 60%;
+        -ms-flex: 1 1 70%;
+            flex: 1 1 70%;
     z-index: 15;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -1740,6 +1731,9 @@ body.scroll-off {
   .post-button a::after {
     border: 3px solid transparent;
     border-left: 3px solid #c7b299;
+  }
+  .slider .slider-item p {
+    max-width: 90%;
   }
 }
 @media (max-width: 500px) {

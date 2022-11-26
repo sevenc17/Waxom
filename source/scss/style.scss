@@ -970,24 +970,15 @@ body.scroll-off {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	.about-img {
-		h3 {
-			font-family: "Raleway";
-			font-size: calc(15px + 19 * (100vw / 1400));
-			font-weight: 400;
-			background: url(logos.png) 0 0 / 20% 100% no-repeat;
-			padding: 0 0 2% 20%;
-			line-height: -2;
-			transform: translate(0, -25%);
+		img {
+			max-width: 50%;
+			padding: 0 0 5% 0;
 		}
 	}
 	p {
 		line-height: 1.7;
 		padding: 5% 0;
 		max-width: 95%;
-	}
-	img {
-		max-width: 80%;
-		padding: 0 0 5% 0;
 	}
 }
 
@@ -1289,8 +1280,8 @@ body.scroll-off {
 		}
 		.list-burger {
 			display: block;
-			width: 5vw;
-			height: 3.5vw;
+			width: 6vw;
+			height: 5vw;
 			position: relative;
 			align-self: center;
 			z-index: 15;
@@ -1300,7 +1291,7 @@ body.scroll-off {
 				left: 0;
 				width: 100%;
 				height: 2px;
-				top: 40%;
+				top: 45%;
 				margin-top: 0px;
 				transition: 0.7s;
 			}
@@ -1335,6 +1326,7 @@ body.scroll-off {
 		}
 		.menu-header {
 			justify-content: space-between;
+			padding: 5% 0;
 		}
 		.menu-wrapper {
 			top: -150vh;
@@ -1355,12 +1347,12 @@ body.scroll-off {
 			justify-content: space-evenly;
 			padding: 0 0 0 2%;
 			img {
-				max-width: 5.5vw
+				max-width: 5vw
 			}
-			flex: 1 1 40%;
+			flex: 1 1 20%;
 		}
 		.list__menu {
-			flex: 1 1 60%;
+			flex: 1 1 70%;
 			z-index: 15;
 			order: 2;
 			display: block;
@@ -1560,7 +1552,13 @@ body.scroll-off {
 			border: 3px solid transparent;
 			border-left: 3px solid #c7b299;
 		}
-
+	}
+	.slider {
+		.slider-item {
+			p {
+				max-width: 90%;
+			}
+		}
 	}
 }
 
