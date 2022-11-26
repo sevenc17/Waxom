@@ -781,17 +781,17 @@ body.scroll-off {
 	.slick-arrow {
 		position: absolute;
 		bottom: -4vw;
-		width: 1.5vw;
-		height: 1.5vw;
+		width: 2vw;
+		height: 2vw;
 		font-size: 0;
 	}
 	.slick-arrow.slick-next {
 		background: url(arrow-right.png) 0 0 / cover no-repeat;
-		right: 47%;
+		right: 43%;
 	}
 	.slick-arrow.slick-prev {
 		background: url(arrow-left.png) 0 0 / cover no-repeat;
-		left: 47%;
+		left: 43%;
 	}
 }
 
@@ -1195,6 +1195,25 @@ body.scroll-off {
 			transform: translate(0, 3px);
 			transition: 0.5s;
 		}		
+	}
+}
+
+@media (max-width: 1024px) {
+	.post__slider {
+		padding: 0 0 5% 0;
+		.slick-slide {
+			margin: 0 7px;
+		}
+		.slick-arrow {
+			width: 2.5vw;
+			height: 2.5vw;
+		}
+		.slick-arrow.slick-next {
+			right: 45%;
+		}
+		.slick-arrow.slick-prev {
+			left: 45%;
+		}
 	}
 }
 
