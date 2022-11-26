@@ -154,3 +154,9 @@ for (i of buttonList){
       }
    })
 }
+
+$(document).ready(function() {
+   $('.spoiler-open').click(function(event) {
+      $(this).toggleClass('active').next().slideToggle(400);
+   });
+});

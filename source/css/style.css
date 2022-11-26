@@ -1128,7 +1128,11 @@ body.scroll-off {
 }
 
 .footer-item {
-  width: 100%;
+  position: relative;
+}
+
+.spoiler-item {
+  display: block;
 }
 
 .footer__list {
@@ -1712,6 +1716,35 @@ body.scroll-off {
   }
   .counter h2 {
     font-size: calc(13px + 1.4285714286vw);
+  }
+}
+@media (max-width: 820px) {
+  .spoiler-open {
+    cursor: pointer;
+  }
+  .footer-item {
+    padding: 0 0 5% 8%;
+  }
+  .spoiler-open::before, .spoiler-open::after {
+    content: "";
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    width: 2vw;
+    height: 2px;
+    background-color: #fff;
+  }
+  .spoiler-open::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .spoiler-open::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    left: 2%;
+  }
+  .spoiler-item {
+    display: none;
   }
 }
 @media (max-width: 615px) {

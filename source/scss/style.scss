@@ -954,7 +954,11 @@ body.scroll-off {
 }
 
 .footer-item {
-	width: 100%;
+	position: relative;
+}
+
+.spoiler-item {
+	display: block;
 }
 
 .footer__list {
@@ -1522,6 +1526,36 @@ body.scroll-off {
 		h2 {
 			font-size: calc(13px + 20 * (100vw / 1400));
 		}
+	}
+}
+
+
+@media (max-width: 820px) {
+	.spoiler-open {
+		cursor: pointer;
+	}
+	.footer-item {
+		padding: 0 0 5% 8%;
+	}
+	.spoiler-open::before, .spoiler-open::after {
+		content: '';
+		position: absolute;
+		top: 1vw;
+		left: 0;
+		width: 2vw;
+		height: 2px;
+		background-color: #fff;
+	}
+	.spoiler-open::before {
+		transform: rotate(45deg);
+
+	}
+	.spoiler-open::after {
+		transform: rotate(-45deg);
+		left: 2%;
+	}
+	.spoiler-item {
+		display: none;
 	}
 }
 
