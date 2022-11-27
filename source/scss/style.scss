@@ -1122,9 +1122,11 @@ body.scroll-off {
 			color: #959595;
 		}
 		h3 {
-			color: #c7b299;
 			position: relative;
 			padding: 0 2%;
+			a {
+				color: #c7b299;
+			}
 			&::after {
 				content: '';
 				position: absolute;
@@ -1135,8 +1137,6 @@ body.scroll-off {
 				background-color: #252525;
 			}
 		}
-	}
-	.info1 {
 	}
 	.info2 {
 		justify-content: flex-end;
@@ -1167,6 +1167,28 @@ body.scroll-off {
 	border-radius: 3px;
 	box-shadow: 0px 3px 1px #736357;
 	transition: 0.5s;
+}
+
+.button.button-active, .textboxes-button.button-active, .project__button.button-active {
+	box-shadow: none;
+	transform: translate(0, 3px);
+	transition: 0.5s;	
+}
+
+@media (max-width: 1200px) {
+	.header__wrapper {
+		.list__menu {
+			font-size: calc(9px + 4 * (100vw / 1400));
+		}
+	}
+	.projects-text {
+		.projects-tabs {
+			max-width: 70%;
+			.tab {
+				font-size: calc(7px + 5 * (100vw / 1400));
+			}
+		}
+	}
 }
 
 @media (min-width: 1024px) {
@@ -1210,26 +1232,19 @@ body.scroll-off {
 			left: 45%;
 		}
 	}
-}
-
-.button.button-active, .textboxes-button.button-active, .project__button.button-active {
-	box-shadow: none;
-	transform: translate(0, 3px);
-	transition: 0.5s;	
-}
-
-@media (max-width: 1200px) {
-	.header__wrapper {
-		.list__menu {
-			font-size: calc(9px + 4 * (100vw / 1400));
-		}
-	}
-	.projects-text {
-		.projects-tabs {
-			max-width: 70%;
-			.tab {
-				font-size: calc(7px + 5 * (100vw / 1400));
+	.footer-list {
+		display: block;
+		.info {
+			padding: 2% 0;
+			p::after {
+				height: 1.5vh
 			}
+			h3::after {
+				height: 1.5vh
+			}
+		}
+		.info2 {
+			justify-content: flex-start;
 		}
 	}
 }
