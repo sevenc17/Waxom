@@ -1814,6 +1814,10 @@ body.scroll-off {
   .slider .slider-item p {
     max-width: 90%;
   }
+  .post__slider .slick-arrow {
+    width: 6vw;
+    height: 6vw;
+  }
 }
 @media (max-width: 500px) {
   .textboxes .info {
