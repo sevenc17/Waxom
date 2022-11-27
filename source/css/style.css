@@ -950,11 +950,11 @@ body.scroll-off {
   font-size: 0;
 }
 .post__slider .slick-arrow.slick-next {
-  background: url(arrow-right.png) 0 0/cover no-repeat;
+  background: url(arrow-right.png) 0 0/100% no-repeat;
   right: 43%;
 }
 .post__slider .slick-arrow.slick-prev {
-  background: url(arrow-left.png) 0 0/cover no-repeat;
+  background: url(arrow-left.png) 0 0/100% no-repeat;
   left: 43%;
 }
 
