@@ -473,7 +473,7 @@ body.scroll-off {
 .list__projects {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 310px));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 250px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1475,6 +1475,12 @@ body.scroll-off {
     font-size: calc(7px + 0.7857142857vw);
     background: url(arrow-icon.jpg) 0 50%/2.5vw 2.5vw no-repeat;
   }
+  .widgets-cascad {
+    gap: 5% 0%;
+  }
+  .widget img {
+    width: 80%;
+  }
 }
 @media (max-width: 940px) {
   .date {
@@ -1483,7 +1489,7 @@ body.scroll-off {
 }
 @media (max-width: 768px) {
   .list__projects {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 210px));
   }
   .header__wrapper .logo {
     -webkit-box-flex: 0;
@@ -1636,8 +1642,8 @@ body.scroll-off {
     margin: 0 7px;
   }
   .post__slider .slick-arrow {
-    width: 5vw;
-    height: 5vw;
+    width: 3.5vw;
+    height: 3.5vw;
   }
   .post__slider .slick-arrow.slick-next {
     right: 37%;
@@ -1737,11 +1743,27 @@ body.scroll-off {
   .spoiler-open::before {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .spoiler-open::after {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     left: 2%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .spoiler-open.active::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .spoiler-open.active::after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .spoiler-item {
     display: none;
@@ -1823,6 +1845,36 @@ body.scroll-off {
   .counter .counter-icon img {
     max-width: 60%;
     max-height: 4vw;
+  }
+}
+@media (max-width: 450px) {
+  .post-text p {
+    font-size: calc(5px + 1.0714285714vw);
+  }
+  .post-text h2 {
+    font-size: calc(9px + 0.7142857143vw);
+  }
+  .post-button {
+    padding: 6% 0;
+  }
+  .post-button a {
+    font-size: calc(9px + 0.5714285714vw);
+  }
+  .post-button a::after {
+    border: 4px solid transparent;
+    border-left: 4px solid #c7b299;
+  }
+  .date {
+    min-width: 10vw;
+  }
+  .date .month h3 {
+    font-size: calc(6px + 0.5714285714vw);
+  }
+  .date .day h2 {
+    font-size: calc(14px + 0.8571428571vw);
+  }
+  .spoiler-open::before, .spoiler-open::after {
+    width: 2.5vw;
   }
 }
 @media (max-width: 340px) {
